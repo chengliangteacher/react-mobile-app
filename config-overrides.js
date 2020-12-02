@@ -27,7 +27,9 @@ module.exports = override(
                         options: {
                             lessOptions: {
                                 javascriptEnabled: true,
-                                
+                                modifyVars: {
+                                    "@brand-primary": "#27a771"
+                                }
                             }
                         }
                     },

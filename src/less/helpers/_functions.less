@@ -8,8 +8,8 @@
 @charset "utf-8";
 
 
-@default-w: 375px;
+@default-w: 750px;
 //=====================================h5单位换算函数====================================//
-.size(@name, @px) {
-    @{name}: unit((@px / @default-w) * 100vw, vw)
+.size(@px) {
+    size: unit((@px / @default-w) * 100vw, vw)
 }

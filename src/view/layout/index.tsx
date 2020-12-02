@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { routerConfigItemTypes } from '../../index.d';
 import { RouteChildrenProps } from 'react-router-dom';
 import RouterItems from '../../components/RouterItems';
+import TabBar from "./child/TabBar"
+import Header from "./child/Header"
 interface othersTypes {
     routes: routerConfigItemTypes[];
 }
@@ -10,8 +12,12 @@ type props = othersTypes & RouteChildrenProps;
 class LayoutView extends React.Component<props> {
     render() {
         return (
-            <div>
-                <RouterItems { ...this.props }></RouterItems>
+            <div className="layout">
+                <Header {...this.props} />
+                <div className="content">
+                    <RouterItems {...this.props}></RouterItems>
+                </div>
+                <TabBar {...this.props}></TabBar>
             </div>
         );
     }
